@@ -11,7 +11,7 @@ class EventListener implements Listener
 {
 
     public function onJoin(PlayerJoinEvent $event){
-        BossBar::create($event->getPlayer());
+        //BossBar::create($event->getPlayer());//テスト用コード
     }
 
     public function onQuit(PlayerQuitEvent $event){

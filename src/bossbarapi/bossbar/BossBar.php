@@ -115,11 +115,7 @@ class BossBar
         $this->title = $title;
 
         $spk = new SetActorDataPacket();
-        $spk->metadata = [
-            Entity::DATA_NAMETAG => [
-                Entity::DATA_TYPE_STRING, $this->title
-            ]
-        ];
+        $spk->metadata = [Entity::DATA_NAMETAG => [Entity::DATA_TYPE_STRING, $this->title]];
         $spk->entityRuntimeId = $this->eid;
 
         $this->owner->dataPacket($spk);

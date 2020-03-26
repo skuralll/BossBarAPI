@@ -45,6 +45,10 @@ class BossBarAPI extends PluginBase
         $bossBar->init();
     }
 
+    public function getBossBar(Player $player) : ?BossBar{
+        return isset($this->bossbar[$player->getName()]) ? $this->bossbar[$player->getName()] : null;
+    }
+
     public function unsetBossBar(Player $player){
         if(isset($this->bossbar[$player->getName()])){
             $this->bossbar[$player->getName()]->fin();

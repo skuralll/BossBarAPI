@@ -133,7 +133,7 @@ class BossBar
         $this->owner->dataPacket($bpk);
     }
 
-    protected function moveToPlayer(){
+    public function moveToPlayer(){
         $mpk = new MoveActorAbsolutePacket();
         $mpk->entityRuntimeId = $this->eid;
         $mpk->flags |= MoveActorAbsolutePacket::FLAG_TELEPORT;

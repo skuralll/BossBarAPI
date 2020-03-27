@@ -26,7 +26,7 @@ class BossBar
     /* @var $percentage float*/
     protected $percentage = 1.0;
 
-    public static function create(Player $player, ...$args){
+    public static function create(Player $player, ...$args) : self{
         $bossBar = new static($player, ...$args);
         BossBarAPI::getInstance()->setBossBar($player, $bossBar);
         return $bossBar;

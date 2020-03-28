@@ -48,6 +48,10 @@ class BossBar
     public function onUpdate(int $currentTick){
         if($currentTick % 20 === 0){//20秒ごとに位置更新
             $this->moveToPlayer();
+
+            if($this->percentage <= 0){
+                $this->show();
+            }
         }
     }
 
@@ -87,7 +91,7 @@ class BossBar
     }
 
     public function setPercentage(float $percentage){
-        $percentage = $percentage <= 0 ? 0.001 : $percentage;
+        //$percentage = $percentage <= 0 ? 0.001 : $percentage;
 
         $this->percentage = $percentage;
 

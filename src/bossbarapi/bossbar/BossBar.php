@@ -87,6 +87,8 @@ class BossBar
     }
 
     public function setPercentage(float $percentage){
+        $percentage = $percentage <= 0 ? 0.001 : $percentage;
+
         $this->percentage = $percentage;
 
         $attribute = Attribute::getAttribute(Attribute::HEALTH);
